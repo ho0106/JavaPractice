@@ -193,8 +193,8 @@ public class Test {
 		for(int row = 0;row < arry.length; row++) {
 			for(int column = 0; column < arry[row].length; column++) {
 				sum += arry[row][column];
-				//System.out.println(arry[column].length);
-				//System.out.println(arry[row].length);
+				System.out.println(arry[column].length);
+				System.out.println(arry[row].length);
 			}
 			System.out.printf("ID-" + row + ": ÇÕ°è=" + sum + ", Æò±Õ= %.2f\n",  (float)sum/arry[row].length);
 			sum = 0;
