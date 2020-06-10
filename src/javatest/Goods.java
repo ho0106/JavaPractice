@@ -15,8 +15,8 @@ public class Goods {
 	
 	public void print() {
 		System.out.println("상품 이름 : " + this.name);
-		System.out.println("상품 가격 : " +this. price);
-		System.out.println("재고 수량 : " +this. numberOfStock);
+		System.out.println("상품 가격 : " + this.price);
+		System.out.println("재고 수량 : " + this.numberOfStock);
 		System.out.println("팔린 수량 : " + this.sold);
 	}
 	

@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Test {
 	static Test test = new Test();
+	//static BankAccount ba  = new BankAccount();
 	static Scanner scan = new Scanner(System.in);
 
 	public void printMenu() {
@@ -66,14 +67,17 @@ public class Test {
 				test.mArr();
 				continue;
 			case "8":
+				test.str();
 				continue;
 			case "9":
+				test.caesar();
 				continue;
 			case "10":
 				continue;
 			case "11":
 				continue;
 			case "12":
+				test.runBankAccountExample();
 				continue;
 			case "13.1":
 				continue;
@@ -199,6 +203,63 @@ public class Test {
 			System.out.printf("ID-" + row + ": 합계=" + sum + ", 평균= %.2f\n",  (float)sum/arry[row].length);
 			sum = 0;
 		}
+	}
+	
+	public void str() {
+		String input = "Hello, World";
+		String output = "";
+		char tmp;
+		
+		for (int i =0; i < input.length(); i++) {
+			tmp = input.charAt(i);
+			
+			if ((65 <= tmp) && (tmp <= 90)) {
+				output += input.valueOf(tmp).toLowerCase();
+			} else if ((97 <= tmp) && (tmp <= 122)) {
+				output += input.valueOf(tmp).toUpperCase();
+			} else {
+				output += (char)tmp;
+			}
+		}
+		System.out.println(input);
+		System.out.println(output);
+	}
+	
+	public void caesar() { // 3만큼 밀어주는것
+		int n = 3;
+		n %= 26;
+		String caesar = "Hello World";
+		
+		StringBuffer sb = new StringBuffer();
+		
+		for (int i = 0; i < caesar.length(); i++) {
+			char ch = caesar.charAt(i);
+			
+			int ascii = (int)ch + n;
+			if(Character.isLowerCase(ch)) {
+				if(!Character.isLowerCase(ascii)) {
+					ascii -= 26;
+				}
+			} else if (Character.isUpperCase(ch)) {
+				if(!Character.isUpperCase(ascii)) {
+					ascii -= 26;
+				}
+			}
+			if (ch != 32) {
+				sb.append((char)ascii);
+			} else {
+				sb.append((char)ch);
+			}
+		}
+		System.out.println("원문: " + caesar);
+		System.out.println("암호: " + sb.toString());
+	}
+	
+	public void runBankAccountExample() {
+		BankAccount ba = new BankAccount("123-456789", "홍길동", 10000);
+		ba.printStatus();
+		ba.deposit(20000);
+		ba.withDraw(45000);
 	}
 
 	public static void main(String[] args) {
