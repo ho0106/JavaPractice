@@ -197,8 +197,9 @@ public class Test {
 		for(int row = 0;row < arry.length; row++) {
 			for(int column = 0; column < arry[row].length; column++) {
 				sum += arry[row][column];
-				//System.out.println(arry[column].length);
-				//System.out.println(arry[row].length);
+				System.out.println(arry[column].length);
+				System.out.println(arry[row].length);
+				// 위에 프린트 코드 지울것.
 			}
 			System.out.printf("ID-" + row + ": 합계=" + sum + ", 평균= %.2f\n",  (float)sum/arry[row].length);
 			sum = 0;
