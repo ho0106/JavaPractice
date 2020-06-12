@@ -225,7 +225,7 @@ public class Test {
 		System.out.println(output);
 	}
 	
-	public void caesar() { // 3만큼 밀어주는것
+	public void caesar() { // 3만큼 밀기 시저암호
 		int n = 3;
 		n %= 26;
 		String caesar = "Hello World";
