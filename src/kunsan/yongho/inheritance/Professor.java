@@ -1,19 +1,11 @@
 package kunsan.yongho.inheritance;
 
-import java.util.Scanner;
-
 public class Professor extends Researcher {
+
 	String position;
 
-	@Override
-	public void setData() {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("주민번호, 이름, 출생년도, 고용번호, 부서, 직책");
-		citizenNumber = scan.nextInt();
-		name = scan.next();
-		birthYear = scan.nextInt();
-		employeeNumber = scan.nextInt();
-		department = scan.next();
+	public Professor(int citizenNumber, String name, int birthYear, int employeeNumber, String department) {
+		super(citizenNumber, name, birthYear, employeeNumber, department);
 
 		if (birthYear < 1980) {
 			position = "교수";
@@ -21,13 +13,14 @@ public class Professor extends Researcher {
 			position = "부교수";
 		} else if (birthYear < 2000) {
 			position = "조교수";
+		} else {
+			position = "직책없음";
 		}
 	}
 
 	@Override
-	String toString(String formatter) {
-
-		formatter = "%d %s %d %d %s %s";
-		return String.format(formatter, citizenNumber, name, birthYear, employeeNumber, department, position);
+	public String toString() {
+		return super.toString() + " " + position;
 	}
+
 }
