@@ -141,7 +141,8 @@ public class UniverManagement {
 
 		for (int i = 0; i < persons.length; i++) {
 			if (removeName.equals(persons[i].name)) {
-				newPerson[i] = persons[i+1];
+				System.arraycopy(persons, 0, newPerson, 0, i);
+				System.arraycopy(persons, i + 1, newPerson, i, persons.length - i - 1);
 			}
 		}
 		return newPerson;
