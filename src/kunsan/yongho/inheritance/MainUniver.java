@@ -38,7 +38,7 @@ public class MainUniver {
 					um.updateData(persons);
 					continue;
 				case 5:
-					//um.removeData(persons);
+					persons = um.removeData(persons);
 					continue;
 				case 0:
 					System.out.println("프로그램을 종료합니다.");

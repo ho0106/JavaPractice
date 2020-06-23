@@ -133,7 +133,7 @@ public class UniverManagement {
 		}
 		return persons;
 	}
-/*
+
 	public Person[] removeData(Person[] persons) { // 데이터 삭제
 		System.out.print("삭제할 구성원 선택 : ");
 		String removeName = scan.next();
@@ -141,11 +141,10 @@ public class UniverManagement {
 
 		for (int i = 0; i < persons.length; i++) {
 			if (removeName.equals(persons[i].name)) {
-				newPerson[i] = persons[i];
+				newPerson[i] = persons[i+1];
 			}
-
 		}
 		return newPerson;
 	}
-*/
+
 }
