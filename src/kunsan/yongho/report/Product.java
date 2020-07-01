@@ -19,7 +19,7 @@ abstract class Product {
 		this.stock = stock;
 		this.price = price;
 	}
-	
+
 	public String toString() {
 		return getName() + " " + getMaker();
 	}
